@@ -301,7 +301,8 @@ function sufficientInventory(comparable) {
   }
   if (inventoryField === undefined) {
     // The Webflow collection does not have the proper inventory field: ignore
-    console.log(`Warning: the inventory field (${inventoryField}) does not exist in this webflow collection. Skipping inventory check.`);
+    console.log(`Warning: the inventory field (${field}) does not exist in this webflow collection. Skipping inventory check.`);
+    console.log(`Available fields: `, Object.keys(wfItem));
     return true;
   }
   const fxQuantity = Number(fxItem.quantity);
